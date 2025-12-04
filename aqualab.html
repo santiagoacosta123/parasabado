@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaCheck - Administrador</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="brand">
+        <img src="logo.jpg" class="logo">
+        <h2>AquaCheck<br><span>Administrador</span></h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li>Panel</li>
+            <li>Usuarios</li>
+            <li>Químicos</li>
+            <li class="active">Muestras</li>
+            <li>Notificaciones</li>
+        </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+        <ul>
+            <li>Configuración</li>
+            <li>Cerrar sesión</li>
+        </ul>
+    </div>
+</aside>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="content">
+
+    <!-- TOP BAR -->
+    <section class="top-bar">
+        <div>
+            <h1>Inicio</h1>
+            <p>Monitorea la calidad del agua en tiempo real</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Buscar muestras o ubicaciones...">
+        </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div>
+            <h2>Bienvenido a AquaCheck!</h2>
+            <p>Monitoreo inteligente de fuentes hídricas</p>
+        </div>
+        <img src="logo.jpg" class="banner-img">
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats-grid">
+
+        <div class="stat-card safe">
+            <h3>Zonas seguras</h3>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card warn">
+            <h3>Advertencias</h3>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card danger">
+            <h3>Zonas peligrosas</h3>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card active-alerts">
+            <h3>Alertas activas</h3>
+            <span>2</span>
+        </div>
+
+    </section>
+
+    <!-- ALERTAS RECIENTES -->
+    <section class="alerts-section">
+
+        <h3>Alertas recientes</h3>
+
+        <div class="alert-item">
+            <div class="alert-info">
+                <strong>Popayán Cauca</strong>
+                <p>Reporte de calidad de agua – Zona #1</p>
+            </div>
+        </div>
+
+        <div class="alert-item">
+            <div class="alert-info">
+                <strong>Lomas de Granada</strong>
+                <p>Niveles químicos fuera de parámetros</p>
+            </div>
+        </div>
+
+        <button class="btn-primary">Ver todas las alertas</button>
+    </section>
+
+    <!-- ZONAS -->
+    <section class="zones-box">
+        <h3>Zonas cercanas</h3>
+
+        <div class="zone-row">
+            <span>San José – Popayán</span>
+            <span class="percent">95%</span>
+        </div>
+
+        <div class="zone-row">
+            <span>María – Popayán</span>
+            <span class="percent">90%</span>
+        </div>
+
+        <div class="zone-row">
+            <span>Centro – Popayán</span>
+            <span class="percent">99%</span>
+        </div>
+
+        <div class="zone-row">
+            <span>La Paz – Popayán</span>
+            <span class="percent">95%</span>
+        </div>
+
+        <button class="btn-outline">Ver mapa completo</button>
+    </section>
+
+</main>
+
+</body>
+</html>
