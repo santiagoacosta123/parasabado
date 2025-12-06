@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Check </title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: white;
+        display: flex;
+    }
+
+    #Menu {
+        width: 250px;
+        min-height: 100vh;          
+        background: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid gray;
+    }
+
+    .titulo{
+        display: flex;
+        width: 100%;
+    }
+    .imagen{
+        width: 60%;
+        height: 130px;
+    }
+    .aqua{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    #Menu h2 {
+        color: #2b0db1;
+        font-size: 26px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    #Menu h3 {
+        color: #555;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+        opacity: 0.8;
+    }
+
+    .menu1 {
+        background: linear-gradient(90deg, #360db1bf, #05aa1d);
+        color: white;
+        padding: 14px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 4px 10px rgba(13,177,109,0.3);
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        background: #f8f9fa;
+        border: 2px solid #0db16d;
+        color: #050505;
+        font-weight: bold;
+        padding: 14px;
+        margin: 8px 0;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .menu-user {
+        margin-top: auto;
+    }
+    .img{
+        width: 30px;
+        height: 20px;
+    }
+
+
+    #centro {
+        flex: 1;
+        background: rgba(244, 247, 249, 0.775);
+    }
+
+    .conten{
+        height: 150px;
+        background: white;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        border-radius: 0 0 15px 15px;
+    }
+    .conten h2 {
+        font-size: 24px;
+        color: #333;
+        }
+    .conten p {
+        color: #666;
+        margin-bottom: 20px;
+        }
+    .barra_busqueda{
+        display: flex;
+        align-items: center;
+        width: 280px;
+        height: 35px;
+        background-color: #55555529;
+        border: 1px solid grey;
+        border-radius: 15px;
+        color: black;
+        padding-left: 10px;
+    }
+
+    .conten1 {
+        background: linear-gradient(90deg, #360db1bf, #05aa1d);
+        width: 60%;
+        margin: 15px;
+        height: 40px;
+        padding: 30px;
+        border-radius: 40px;
+        margin-top: 30px;
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
+        border: 1px solid rgba(17, 138, 29, 0.604);
+        box-shadow: 0 8px 20px rgba(13,177,109,0.3);
+    }
+
+    .conten2 {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 30px;
+        }
+
+    .tarjeta {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 30px;
+        gap: 18px;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h3{
+        color: grey;
+    }
+    .info{
+        display: flex;
+        align-items: center;
+    }
+    .i{
+        display: flex;
+        align-items: center;
+    }
+    .e{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .circulo {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+        }
+    .verde { background: #4caf50; }
+    .naranja { background: #ff9800; }
+    .rojo { background: #f44336; }
+
+    .content3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    .a-1{
+        background: linear-gradient(90deg, #360db1bf, #05aa1d);
+        width: 40%;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .a-1 .img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .content4{
+        background: linear-gradient(90deg, #b42fcc, #f058cd);
+        width: 40%;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+</style>
+</head>
+<body>
+
+    <div id="Menu">
+        <div class="titulo">
+            <img class="imagen" src="imagenes/logo.png" >
+            <div class="aqua">
+                <h2>AQUA CHECK</h2>
+                <h3>Usuario</h3>
+            </div>
+        </div>
+
+        <div class="menu1">Inicio</div>
+        <div class="menu">Mapa</div>
+        <div class="menu">Educación</div>
+        <div class="menu">Tendencias</div>
+        <div class="menu">Notificaciones</div>
+
+        <div class="menu-user">
+            <div class="menu">
+                <img class="img" src="imagenes/user.png">
+                Mi perfil
+            </div>
+            <div class="menu">
+                <img class="img" src="imagenes/Settings.png">
+                Configuración
+            </div>
+            <div class="menu">
+                <img class="img" src="imagenes/Logout.png" >
+                Cerrar sesión
+            </div>
+        </div>
+    </div>
+
+    <div id="centro">
+        <div class="conten">
+        <div class="text">
+            <h2>Todas las alertas</h2>
+            <p>Monitorea la calidad del agua en tiempo real</p>
+            </div>
+            <div class="barra_busqueda">
+                <img class="img" src="imagenes/Search.png" >
+                <h3>Buscar muestras, ubicaciones</h3> </div>
+        </div>
+        <div class="conten1">Todas las alertas</div>
+        <div class="conten2">
+            <div class="tarjeta">
+                <div class="info">
+                <div class="circulo verde"></div>
+                <div class="e">
+                    <h2>Bogotá - Usaquén</h2>
+                    <h3>Buen porcentaje de cloro y pH en agua, apta para el consumo</h3>
+                </div>
+                </div>
+                <div class="i">
+                <div class="fecha">5/10/2025</div>
+                <img class="icono" src="imagenes/Checkmark (1).png" >
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="info">
+                <div class="circulo verde"></div>
+                <div class="e">
+                    <h2>Bogotá - Suba</h2>
+                    <h3>Buen porcentaje de TDS y pH en agua, apta para el consumo</h3>
+                </div>
+                </div>
+                <div class="i">
+                <div class="fecha">5/10/2025</div>
+                <img class="icono" src="imagenes/Checkmark (1).png" >
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="info">
+                <div class="circulo naranja"></div>
+                <div class="e">
+                    <h2>Popayán - centro</h2>
+                    <h3>Baja cantidad de cloro y pH en el agua no apta para el consumo humano</h3>
+                </div>
+                </div>
+                <div class="i">
+                <div class="fecha">5/10/2025</div>
+                <img class="icono" src="imagenes/Error.png" >
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="info">
+                <div class="circulo naranja"></div>
+                <div class="e">
+                    <h2>Bogotá - Chapinero</h2>
+                    <h3>Baja cantidad de cloro y sólidos disueltos en el agua. Cuidado con el consumo</h3>
+                </div>
+                </div>
+                <div class="i">
+                <div class="fecha">5/10/2025</div>
+                <img class="icono" src="imagenes/Error.png" >
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="info">
+                <div class="circulo rojo"></div>
+                <div class="e">
+                    <h2>Medellín - El Poblado</h2>
+                    <h3>Turbidez mayor a lo recomendado. Tener cuidado con el consumo de agua</h3>
+                </div>
+                </div>
+                <div>
+                <div class="fecha">5/10/2025</div>
+                <img class="icono" src="imagenes/Error (1).png" >
+                </div>
+            </div>
+        </div>
+        <div class="content3">
+            <div class="a-1">
+                <img src="imagenes/Logout.png" class="img">
+                <h1>Compartir alerta</h1>
+            </div>
+            <div class="a-1">
+                <img src="imagenes/Vector.png" class="img">
+                <h1>Eliminar Alerta</h1>
+            </div>
+        </div>
+        <div class="content4">
+            <h1>Regresar</h1>
+        </div>
+    </div>
+</body>
+</html>

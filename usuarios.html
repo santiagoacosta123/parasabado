@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Check </title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: white;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    #Menu {
+        width: 260px;
+        min-height: 100vh;          
+        background: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid gray;
+        position: sticky;
+        top: 0;
+    }
+
+    .titulo{
+        display: flex;
+        width: 100%;
+    }
+    .imagen{
+        height: auto;
+        max-height: 130px;
+    }
+    .aqua{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    #Menu h2 {
+        color: #2b0db1;
+        font-size: 24px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    #Menu h3 {
+        color: #555;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 30px;
+        opacity: 0.8;
+    }
+
+    .menu1, .menu {
+        padding: 14px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .menu1 {
+        background: linear-gradient(90deg, #360db1bf, #05aa1d);
+        color: white;
+        box-shadow: 0 4px 10px rgba(13,177,109,0.3);
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        background: #f8f9fa;
+        border: 2px solid #0db16d;
+        color: #050505;
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    .menu-user {
+        margin-top: auto;
+    }
+
+    #centro {
+        flex: 1;
+        background: rgba(244, 247, 249, 0.775);
+    }
+
+    .conten{
+        height: 150px;
+        background: white;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        border-radius: 0 0 15px 15px;
+    }
+
+    .conten h2 {
+        font-size: 24px;
+        color: #333;
+        }
+
+        .conten h3 {
+        font-size: 15px;
+        color: #777;
+        margin-top: 4px;
+        }
+
+    .barra_busqueda{
+        display: flex;
+        align-items: center;
+        width: 280px;
+        height: 35px;
+        background-color: #55555529;
+        border: 1px solid grey;
+        border-radius: 15px;
+        color: black;
+        padding-left: 10px;
+    }
+
+    .img{
+        width: 25px;
+        height: auto;
+    }
+
+    .conten1 {
+        width: 95%;
+        height: 130px;
+        margin: 30px auto;
+        background: linear-gradient(90deg, #360db1bf, #05aa1d);
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+    .conten1 h2 { font-size: 26px; }
+    .conten1 h3 { font-size: 16px; margin-top: 8px; opacity: 0.95; }
+
+    .conten2 {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .tarjeta {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 22%;
+        min-width: 150px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+    .test{
+        display: flex;
+        gap: 20px;
+    }
+    .tarjeta h1{
+        color: red;
+    }
+    .tarjeta h3{
+        color: rgb(82, 82, 82);
+    }
+    .tarjeta img.im {
+        width: 37px;
+    }
+
+    .conten3{
+        margin: 40px auto;
+        display: flex;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .a-1, .a-2{
+        background-color: white;
+        flex: 1;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+        padding: 10px; 
+    }
+    
+    .a{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .a .a_1{
+        display: flex;
+        width: 100%;
+        height: 70px;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+    .r{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .imag{
+        width: 10%;
+        height: 20px;
+    }
+    .a .a_2{
+        width: 80%;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30px;
+    }
+
+    .b{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .circulo {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-top: 10px;
+        }
+    .naranja { background: #ff9800; }
+    .rojo { background: #f44336; }
+
+    .b .a_1{
+        background-color: #21e846a9;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    .b .a_2{
+        width: 80%;
+        height: 40px;
+        margin-left: 30px;
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .a_3{
+        background-color: #ff9800;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    h4{
+        margin-left: 20px;
+    }
+    .a_2{
+        width: 90%;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+
+    .conten4{
+        margin:auto;
+        background-color: white;
+        width: 90%;
+        height: 180px;
+        padding: 20px ;
+        border-radius: 15px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .conten4 h3, h4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .h{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+
+
+    .b-1{
+        background-color: rgba(191, 243, 249, 0.811);
+        border: 2px solid rgb(96, 96, 244);
+        width: 25%;
+        height: 100px;
+        border-radius: 20px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .conten5{
+        margin: 40px auto;
+        display: flex;
+        gap: 20px;
+        width: 90%;
+    }
+
+
+    .conten5 .a-1, .conten5 .a-2{
+        flex: 1;
+        width: 280px;
+        height: 270px;
+        gap: 10px;
+    }
+
+    .A-1{
+        width: 100%;
+        height: 60px;
+        border-radius: 15px;
+        border: 1px solid rgb(5, 58, 249);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        background-color: #6445eb6e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        gap: 10px;
+    }
+    .A-2{
+        width: 100%;
+        height: 60px;
+        border-radius: 15px;
+        border: 1px solid rgb(251, 92, 0);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        background-color: rgba(255, 149, 0, 0.408);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        gap: 10px;
+    }
+
+</style>
+<body>
+
+    <div id="Menu">
+        <div class="titulo">
+            <img class="imagen" src="imagenes/logo.png" >
+            <div class="aqua">
+                <h2>AQUA CHECK</h2>
+                <h3>Usuario</h3>
+            </div>
+        </div>
+
+        <div class="menu1">Inicio</div>
+        <div class="menu">Mapa</div>
+        <div class="menu">Educación</div>
+        <div class="menu">Tendencias</div>
+        <div class="menu">Notificaciones</div>
+
+        <div class="menu-user">
+            <div class="menu">
+                <img class="img" src="imagenes/user.png">
+                Mi perfil
+            </div>
+            <div class="menu">
+                <img class="img" src="imagenes/Settings.png">
+                Configuración
+            </div>
+            <div class="menu">
+                <img class="img" src="imagenes/Logout.png" >
+                Cerrar sesión
+            </div>
+        </div>
+    </div>
+
+    <div id="centro">
+        <div class="conten">
+            <div class="text">
+            <h2>Inicio</h2>
+            <h3>Monitorea la calidad del agua en tiempo real</h3>
+            </div>
+            <div class="barra_busqueda">
+                <img class="img" src="imagenes/Search.png" >
+                <h3>Buscar muestras, ubicaciones</h3> </div>
+        </div>
+        <div class="conten1">
+            <div class="tet">
+            <h2>¡Bienvenido a AquaCheck!</h2>
+            <h3>Monitorea la calidad del agua en tu zona y mantente informado sobre alertas en tiempo real.</h3>
+            </div>
+                <img  class="imagen" src="imagenes/logo.png">
+        </div>
+        <div class="conten2">
+            <div class="tarjeta">
+                <h3>Zonas seguras</h3>
+                <div class="test">
+                    <h1>1</h1>
+                    <img class="im" src="imagenes/Checkmark.png">
+                </div>
+            </div>
+            <div class="tarjeta">
+                <h3>Advertencias</h3>
+                <div class="test">
+                    <h1>2</h1>
+                    <img class="im" src="imagenes/Error.png">
+                </div>
+            </div>
+            <div class="tarjeta">
+                <h3>Zonas peligrosas</h3>
+                <div class="test">
+                    <h1>3</h1>
+                    <img class="im" src="imagenes/Error (1).png">
+                </div>
+            </div>
+            <div class="tarjeta">
+                <h3>Alertas activas</h3>
+                <div class="test">
+                    <h1>4</h1>
+                    <img class="im" src="imagenes/Done.png">
+                </div>
+            </div>
+        </div>
+        <div class="conten3">
+            <div class="a-1">
+                    <h3>Alertas Recientes en tu Zona</h3>
+                    <h5>Mantente informado sobre la calidad del agua cerca de ti</h5>
+                <div class="a">
+                    <div class="a_1">
+                        <div class="circulo naranja"></div>
+                        <div class="r">
+                        <h4>Comuna 5 – Pandiguando</h4>
+                        <h5>Barrio Bolívar</h5>
+                        <h6>Hace 2 horas</h6>
+                        </div>
+                        <img src="imagenes/Share.png" class="imag">
+                        
+                    </div>
+                    <div class="a_1">
+                        <div class="circulo rojo"></div>
+                        <div class="r">
+                        <h4>La Paz - Chapinero</h4>
+                        <h5>Cloro bajo</h5>
+                        <h6>Hace 5 horas</h6>
+                        </div>
+                        <img src="imagenes/Share.png" class="imag">
+                        
+                    </div>
+                    <div class="a_2">Ver todas las alertas</div>
+                </div>
+            </div>
+            <div class="a-2">
+                <h3>Zonas Cercanas</h3>
+                <h5>Calidad del agua en tu área</h5>
+                <div class="b">
+                    <div class="a_1">
+                        <h4>Centro Histórico</h4>
+                    </div>
+                    <div class="a_1">
+                        <h4>Campanario</h4>
+                    </div>
+                    <div class="a_3">
+                        <h4>Lomas de Granada</h4>
+                    </div>
+                    <div class="a_1">
+                        <h4>El Recuerdo</h4>
+                    </div>
+                    <div class="a_2">Ver mapa completo</div>
+                </div>
+            </div>
+        </div>
+        <div class="conten4">
+                <h2>Consejos para Identificar Agua de Calidad</h2>
+            <div class="h">
+                <div class="b-1">
+                    <h3>Verifica el color</h3>
+                    <h4>El agua potable debe ser completamente clara y sin color.</h4>
+                </div>
+                <div class="b-1">
+                    <h3>Revisa el olor</h3>
+                    <h4>El agua segura no debe tener ningún olor desagradable.</h4>
+                </div>
+                <div class="b-1">
+                    <h3>Análisis regular</h3>
+                    <h4>Realiza análisis cada 6 meses si tienes sistema propio.</h4>
+                </div>
+            </div>
+        </div>
+        <div class="conten5">
+            <div class="a-1"> 
+                <h2>Mejorando esta Semana</h2>
+                <div class="A-1">Mejorando esta semana: Comuna 2 +12%</div>
+                <div class="A-1">Campamento +9%</div>
+                <div class="A-1">El Mirador +6%</div>
+        </div>
+            <div class="a-2">
+                <h2>Requiere Atención</h2>
+                <div class="A-2">Requiere atención: Pandiguando –13%</div>
+                <div class="A-2">Bello Horizonte –8%</div>
+                <div class="A-2">La Paz –5%</div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
