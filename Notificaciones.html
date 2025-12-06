@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Check - Notificaciones</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background: #ffffff;
+        }
+
+    
+        #Menu {
+            width: 260px;
+            min-height: 100vh;
+            background: #ffffff;
+            padding: 25px;
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #Menu img {
+            width: 180px;
+            display: block;
+            margin: auto;
+        }
+
+        #Menu h2 {
+            color: #2171c1;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        #Menu h3 {
+            text-align: center;
+            color: #777;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .menu, .menu1 {
+            padding: 12px;
+            border-radius: 12px;
+            margin: 8px 0;
+            text-align: left;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid #2dc4ff;
+        }
+
+        .menu1 {
+            background: linear-gradient(90deg, #0db16d, #2dc4ff);
+            border: none;
+            color: white;
+        }
+
+        .menu:hover {
+            background: #e8f9ff;
+        }
+
+        .menu-user {
+            margin-top: auto;
+        }
+
+        #centro {
+            flex: 1;
+            padding: 40px;
+            background: #fafafa;
+        }
+
+    
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .buscador {
+            width: 360px;
+            padding: 10px 15px;
+            background: #f2f2f2;
+            border: 1px solid #cfcfcf;
+            border-radius: 20px;
+        }
+
+    
+        .subtitulo {
+            margin-top: 5px;
+            font-size: 15px;
+            color: #666;
+        }
+
+
+        .lista-notificaciones {
+            margin-top: 35px;
+        }
+
+        .tarjeta-alerta {
+            background: #f4f4f4;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .alert-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .alert-info div h3 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .fecha {
+            font-size: 13px;
+            color: #777;
+            margin-top: 5px;
+        }
+
+
+        .icon {
+            font-size: 30px;
+        }
+
+        .ico-warning { color: #e0a84b; }
+        .ico-danger { color: #b54b4b; }
+        .ico-ok { color: #3ea35c; }
+
+
+        .estado {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .estado.atencion {
+            background: #e0a84b;
+        }
+
+        .estado.urgente {
+            background: #b54b4b;
+        }
+
+        .estado.info {
+            background: #70c48b;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="Menu">
+        <img src="AquaCheck.jpg">
+
+        <h2>AQUA CHECK</h2>
+        <h3>Usuario</h3>
+
+        <div class="menu">Inicio</div>
+        <div class="menu">Mapa</div>
+        <div class="menu">Educación</div>
+        <div class="menu">Tendencias</div>
+        <div class="menu1">Notificaciones</div>
+
+        <div class="menu-user">
+            <div class="menu">Mi perfil</div>
+            <div class="menu">Configuración</div>
+            <div class="menu">Cerrar sesión</div>
+        </div>
+    </div>
+
+
+    <div id="centro">
+
+        <div class="header">
+            <div>
+                <h1>Notificaciones</h1>
+                <p class="subtitulo">Monitorea la calidad del agua en tiempo real</p>
+            </div>
+
+            <input class="buscador" type="text" placeholder="Buscar muestras, ubicaciones">
+        </div>
+
+        <div class="lista-notificaciones">
+
+
+            <div class="tarjeta-alerta">
+                <div class="alert-info">
+                    <span class="icon ico-warning">⚠️</span>
+                    <div>
+                        <h3>Bogotá – Chapinero</h3>
+                        <p>Nivel de cloro por debajo del óptimo</p>
+                        <p class="fecha">2025-10-13 14:30</p>
+                    </div>
+                </div>
+                <span class="estado atencion">Atención</span>
+            </div>
+
+
+            <div class="tarjeta-alerta">
+                <div class="alert-info">
+                    <span class="icon ico-danger">⛔</span>
+                    <div>
+                        <h3>Medellín – El Poblado</h3>
+                        <p>Turbidez elevada - Agua no potable</p>
+                        <p class="fecha">2025-10-13 12:15</p>
+                    </div>
+                </div>
+                <span class="estado urgente">Urgente</span>
+            </div>
+
+
+            <div class="tarjeta-alerta">
+                <div class="alert-info">
+                    <span class="icon ico-ok">✔️</span>
+                    <div>
+                        <h3>Cali – Norte</h3>
+                        <p>Calidad del agua restaurada a niveles óptimos</p>
+                        <p class="fecha">2025-10-13 10:00</p>
+                    </div>
+                </div>
+                <span class="estado info">Información</span>
+            </div>
+
+
+            <div class="tarjeta-alerta">
+                <div class="alert-info">
+                    <span class="icon ico-warning">⚠️</span>
+                    <div>
+                        <h3>Barranquilla – Centro</h3>
+                        <p>pH ligeramente ácido detectado</p>
+                        <p class="fecha">2025-10-12 18:45</p>
+                    </div>
+                </div>
+                <span class="estado atencion">Atención</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
