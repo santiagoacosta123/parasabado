@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            font-family: Arial;
+        }
+        .container {
+            width: 900px;
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .left, .right {
+            width: 50%;
+            padding: 40px;
+        }
+        .right {
+            background: url(https://institutodelagua.es/wp-content/uploads/2024/02/calidad-del-agua-descubre-que-es-y-como-incide-en-tu-salud-y-medio-ambiente-2.jpg);
+        }
+        .title { font-size: 24px; font-weight: bold; margin-bottom: 5px; }
+        .subtitle { font-size: 14px; color: #666; margin-bottom: 20px; }
+        .input { 
+            height: 50px; 
+            border: 2px solid #00d4ff; 
+            border-radius: 10px; 
+            margin-bottom: 15px;
+            padding: 0 15px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            color: #aaa;
+        }
+        .confirm { background: #e6f7ff; border-color: #91d5ff; }
+        .row { display: flex; gap: 10px; align-items: center; margin-bottom: 15px; }
+        .select { 
+            height: 45px; 
+            border: 2px solid #00d4ff; 
+            border-radius: 10px; 
+            padding: 0 10px;
+            background: white;
+            display: flex;
+            align-items: center;
+            color: #aaa;
+            min-width: 80px;
+        }
+        .date-box {
+            height: 45px;
+            border: 2px solid #00d4ff;
+            border-radius: 10px;
+            background: #e6f7ff;
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #333;
+        }
+        .icon { width: 18px; height: 18px; background: #00d4ff; border-radius: 4px; }
+        .btn {
+            height: 55px;
+            background: linear-gradient(to right, #00b894, #00cec9);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            box-shadow: 0 5px 10px rgba(0,200,150,0.3);
+        }
+        .label { font-weight: bold; color: #333; margin-bottom: 8px; display: block; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <div class="title">Registra tu información</div>
+        <div class="subtitle">¡Registrarte podrás utilizar todas nuestras funciones!</div>
+
+        <div class="input">Nombre completo</div>
+        <div class="input">Número de teléfono</div>
+        <div class="input">Dirección de correo electrónico</div>
+        <div class="input confirm">Confirmar correo</div>
+
+        <div class="label">Fecha de nacimiento</div>
+        <div class="row">
+            <div class="select">Mes</div>
+            <div class="select">Día</div>
+            <div class="select">Año</div>
+        </div>
+
+        <div class="label">Gender</div>
+        <div class="select" style="width: 150px;">Seleccionar</div>
+
+        <div class="date-box">
+            <div class="icon"></div>
+            <div>06/15/2023</div>
+        </div>
+
+        <div class="btn">Registrar</div>
+    </div>
+    <div class="right"></div>
+</div>
+
+</body>
+</html>
