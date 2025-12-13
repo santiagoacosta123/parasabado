@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqua Check - Administrador</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="flex min-h-screen">
+
+
+    <aside class="w-96 bg-white shadow-xl p-10 flex flex-col">
+      <div class="text-center mb-10">
+        <img src="image 5.png" class="imag">
+        <h1 class="text-3xl font-bold text-teal-600">AQUA CHECK</h1>
+        <p class="text-gray-500 text-sm">Administrador</p>
+      </div>
+
+      <nav class="space-y-4">
+        <a href="#" class="menu-btn active">
+          <i class="fas fa-home"></i> Panel
+        </a>
+        <a href="#" class="menu-btn">
+          <i class="fas fa-users"></i> Usuarios
+        </a>
+        <a href="#" class="menu-btn">
+          <i class="fas fa-flask"></i> Químicos
+        </a>
+        <a href="#" class="menu-btn">
+          <i class="fas fa-vial"></i> Muestras
+        </a>
+        <a href="#" class="menu-btn">
+          <i class="fas fa-bell"></i> Notificaciones
+        </a>
+      </nav>
+    </aside>
+
+    <main class="flex-1 p-12">
+
+      <h1 class="text-4xl font-bold text-gray-800 mb-2">Inicio</h1>
+      <p class="text-gray-600 mb-10">Monitorea la calidad del agua en tiempo real</p>
+
+      <div class="grid grid-cols-4 gap-8 mb-12">
+
+        <div class="card bg-white p-8 text-center">
+          <p class="text-gray-600 text-lg mb-2">Calidad promedio</p>
+          <p class="text-5xl font-bold text-gray-800">87.6%</p>
+          <p class="text-green-600 font-medium mt-4">+2.1% desde el mes pasado</p>
+        </div>
+
+        <div class="card bg-white p-8 text-center">
+          <p class="text-gray-600 text-lg mb-2">Total Muestras</p>
+          <p class="text-5xl font-bold text-gray-800">1,247</p>
+          <p class="text-green-600 font-medium mt-4">+180 nuevas esta semana</p>
+        </div>
+
+        <div class="card bg-white p-8 text-center relative">
+
+          <p class="text-gray-600 text-lg mb-2">Zonas en alerta</p>
+          <p class="text-5xl font-bold text-gray-800">3</p>
+          <p class="text-gray-500 mt-4">2 menos que ayer</p>
+
+
+          <div class="badge-container-bottom">
+            <span class="badge-small">Río Molino</span>
+            <span class="badge-small">Río Cauca</span>
+          </div>
+
+        </div>
+
+        <div class="card bg-white p-8 text-center">
+          <p class="text-gray-600 text-lg mb-2">Usuarios desactivados</p>
+          <p class="text-5xl font-bold text-gray-800">892</p>
+          <p class="text-red-600 font-medium mt-4">+12% este mes</p>
+        </div>
+
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl p-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">CALIDAD POR ZONA</h2>
+
+        <div class="flex justify-center">
+          <img src="image 15.png" alt="Calidad por zona"
+          class="max-w-4xl w-full border border-gray-200 rounded-xl">
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
