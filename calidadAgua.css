@@ -49,10 +49,13 @@ body {
     font-size: 16px;
     box-shadow: 0 4px 10px rgba(13,177,109,0.3);
     text-align: left;
-    border: 1px solid white;
+    border: none;
+    text-decoration: none; /* Quita el subrayado */
+    display: block;        /* Ocupa el ancho necesario */
 }
 
 .menu {
+    text-decoration: none; /* Quita el subrayado azul */
     display: flex;
     background: #f8f9fa;
     padding: 14px;
@@ -69,6 +72,7 @@ body {
         linear-gradient(90deg, #0db16d, #2dc4ff);
     background-origin: border-box;
     background-clip: padding-box, border-box;
+    transition: transform 220ms ease; /* Añade suavidad al hover */
 
 }
 

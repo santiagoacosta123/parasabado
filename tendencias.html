@@ -10,7 +10,7 @@
 <!--menu lateral-->
 <div id="Menu">
     <div class="imagen1">
-        <img src="imagenesTendencias/logo.png">
+        <img src="imagenes/logo.png">
     </div>
 
     <div class="titulo">
@@ -21,26 +21,22 @@
     </div>
 
 <!--menu principal-->
-    <div class="menu">Inicio</div>
-    <div class="menu">Mapa</div>
-    <div class="menu">Educación</div>
-    <button class="menu1 boton-tendencias">Tendencias</button>
-    <div class="menu">Notificaciones</div>
+<a href="inicio.html" class="menu">Inicio</a>
+    <a href="mapa.html" class="menu">Mapa</a>
+    <a href="educacion.html" class="menu">Educación</a>
+    <a href="tendencias.html" class="menu1 boton-tendencias">Tendencias</a>
+    <a href="notificaciones.html" class="menu">Notificaciones</a>
 
-<!--menu inferior-->
-    <div class="menu-user">
-        <div class="menu">
-            <img class="image" src="imagenesTendencias/user.png">
-            Mi perfil
-        </div>
-        <div class="menu">
-            <img class="image" src="imagenesTendencias/Settings.png">
-            Configuración
-        </div>
-        <div class="menu">
-            <img class="image" src="imagenesTendencias/Logout.png">
-            Cerrar sesión
-        </div>
+<div class="menu-user">
+        <a href="perfil.html" class="menu">
+            <img class="image" src="imagenes/user.png"> Mi perfil
+        </a>
+        <a href="configuracion.html" class="menu">
+            <img class="image" src="imagenes/Settings.png"> Configuración
+        </a>
+        <a href="login.html" class="menu">
+            <img class="image" src="imagenes/Logout.png"> Cerrar sesión
+        </a>
     </div>
 </div>
 
@@ -52,7 +48,7 @@
          <p class="texto2">Monitorea la calidad del agua en tiempo real</p>
         </div>
          <div class="search search-anim">
-                <img class="lupa" src="imagenesTendencias/Search.png" alt="search icon">
+                <img class="lupa" src="imagenes/Search.png" alt="search icon">
                 <p id="pSearch">Buscar muestras, ubicaciones</p>
             </div>
     </div>
@@ -63,7 +59,7 @@
 
             <!--tarjeta:analisisde t-->
             <div class="tendence">
-                <img class="imgBarra" src="imagenesTendencias/barras.png" alt="barras icon">
+                <img class="imgBarra" src="imagenes/barras.png" alt="barras icon">
                 <h2 class="t1">Análisis de Tendencias</h2>
                 <p class="t2">Visualiza la evolución de la calidad del agua a lo largo del tiempo.</p>
             </div>
@@ -71,7 +67,7 @@
             <!--Tendencias zona-->
             <div class="zone">
                 <div class="zone1">
-                    <img class="imgZone" src="imagenesTendencias/zone1.png" alt="Zona Norte">
+                    <img class="imgZone" src="imagenes/zone1.png" alt="Zona Norte">
                      <h3 class="text1">Zona regular</h3>
                      <br>
                      <h2 class="ubi">Sur</h2>
@@ -79,7 +75,7 @@
                 </div>
 
                 <div class="zone2">
-                    <img class="imgZone" src="imagenesTendencias/zone2.png" alt="Zona Centro">
+                    <img class="imgZone" src="imagenes/zone2.png" alt="Zona Centro">
                      <h3 class="text1">Mejor Zona</h3>
                       <br>
                      <h2 class="ubi">Norte</h2>
@@ -87,7 +83,7 @@
                 </div>
 
                 <div class="zone3">
-                    <img class="imgZone" src="imagenesTendencias/zone3.png" alt="Zona Sur">
+                    <img class="imgZone" src="imagenes/zone3.png" alt="Zona Sur">
                       <h3 class="text1">Mayor mejora</h3>
                        <br>
                      <h2 class="ubi">Centro</h2>
@@ -95,7 +91,7 @@
                 </div>
 
                 <div class="zone4">
-                    <img class="imgZone" src="imagenesTendencias/zone4.png" alt="Zona Occidental">
+                    <img class="imgZone" src="imagenes/zone4.png" alt="Zona Occidental">
                     <h3 class="text1">Zona de Alerta</h3>
                      <br>
                      <h2 class="ubi">Oeste</h2>
@@ -108,14 +104,17 @@
                 <div class="grafic1">
                      <h3>Evolución Temporal de Parametros</h3>
                     <p>Consultar la evolucion de los parametros del agua</p>
-                    <img class="imgParametro" src="imagenesTendencias/evoluParametros.png" alt="Grafico parametros">
+                    <img class="imgParametro" src="imagenes/evoluParametros.png" alt="Grafico parametros">
                 </div>
 
                 <div class="grafic2">
-                     <h3>Calidad por Zona</h3>
-                    <p>Consultar la evolucion de los parametros del agua</p>
-                    <img class="imgCalidadZ" src="imagenesTendencias/calidadZ - copia.png" alt="Grafico calidad por zona">
+                    <a href="calidadAgua.html" style="text-decoration: none; color: inherit; display: block;">
+                        <h3>Calidad por Zona</h3>
+                        <p>Consultar la evolucion de los parametros del agua</p>
+                        <img class="imgCalidadZ" src="imagenes/calidadZ - copia.png" alt="Grafico calidad por zona">
+                    </a>
                 </div>
+
             </div>
 
             <!--ph y insh-->
@@ -123,7 +122,7 @@
                 <div class="cont1">
                     <h3 class="textos">Distribución pH</h3>
                     <p class="textos">Distribución pH</p>
-                    <img class="imgPh" src="imagenesTendencias/ph.png">
+                    <img class="imgPh" src="imagenes/ph.png">
                     <p class="textos">-PH Normal:75%</p>
                     <p class="textos">-PH Alto:15%</p>
                     <p class="textos">-PH Normal:10%</p>
